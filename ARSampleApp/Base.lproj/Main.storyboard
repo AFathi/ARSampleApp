@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zv3-WJ-pLc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="eqv-UZ-H4D">
+            <objects>
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="Zv3-WJ-pLc" customClass="ViewController" customModule="ARSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kK5-go-ENH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="deh-EA-ZQb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="iqe-aa-jQw" appends="YES" id="PgK-iw-R5m"/>
+                                </connections>
+                            </arscnView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Total number of players in this game (1 including you)." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tZi-za-Z9v">
+                                <rect key="frame" x="16" y="20" width="343" height="77"/>
+                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="e24-pd-Asw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="j7f-5e-b4q" firstAttribute="trailing" secondItem="tZi-za-Z9v" secondAttribute="trailing" constant="16" id="18N-K2-4dM"/>
+                            <constraint firstItem="deh-EA-ZQb" firstAttribute="trailing" secondItem="j7f-5e-b4q" secondAttribute="trailing" id="CY9-fF-kE0"/>
+                            <constraint firstItem="tZi-za-Z9v" firstAttribute="leading" secondItem="j7f-5e-b4q" secondAttribute="leading" constant="16" id="ICM-FE-lcR"/>
+                            <constraint firstItem="deh-EA-ZQb" firstAttribute="leading" secondItem="j7f-5e-b4q" secondAttribute="leading" id="Khb-U7-XCA"/>
+                            <constraint firstItem="deh-EA-ZQb" firstAttribute="top" secondItem="kK5-go-ENH" secondAttribute="top" id="X5L-55-x7V"/>
+                            <constraint firstItem="deh-EA-ZQb" firstAttribute="bottom" secondItem="j7f-5e-b4q" secondAttribute="bottom" id="cMO-AM-O7s"/>
+                            <constraint firstItem="tZi-za-Z9v" firstAttribute="top" secondItem="j7f-5e-b4q" secondAttribute="top" id="xzz-O9-Ltt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="j7f-5e-b4q"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="deh-EA-ZQb" id="MAM-M9-l5u"/>
+                        <outlet property="stateTextView" destination="tZi-za-Z9v" id="dh3-e5-wy9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A22-Xg-429" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="iqe-aa-jQw">
+                    <connections>
+                        <action selector="didTapOnView:" destination="Zv3-WJ-pLc" id="tYn-0s-s50"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1335" y="154"/>
+        </scene>
+    </scenes>
+</document>
